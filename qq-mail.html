@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>       
+    body,html{
+          height:100%;
+          margin: 0px;}
+
+    .nav1 {border-bottom:1px solid black;
+           box-sizing:border-box;width:100%;background-color: gray;
+           display: inline-block;height: 100px;margin: 0;padding: 0;}
+
+    .fat {font-size: 0;height:calc(100% - 100px);}
+
+    .aside1 {width:200px;background-color: rgba(29, 91, 136, 0.534);
+             width:200px;
+             height:100%;
+             border-right: 1px solid black;
+            box-sizing:border-box;
+            display: inline-block;
+            font-size: 1rem;} 
+
+    .main1 {background-color: rgba(33, 129, 33, 0.315);
+            width:calc(100% - 200px);
+            height:100%;
+            display: inline-block;
+            font-size: 1rem;}
+  </style>  
+</head>
+<body>
+  <div class="nav1">header</div>
+  <div class="fat">
+    <div class="aside1">aside</div>
+    <div class="main1">main</div>  
+  </div>
+</body>
+</html>
