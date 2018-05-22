@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .btn div {
+      display: table;
+      width: 50%;
+      line-height: 40px;
+    }
+
+    .btn div > * {
+      box-sizing: border-box;
+      display: table-cell;
+      border: 1px solid;
+    }
+
+    .btn span {
+      width: 1px;
+      padding: 0 10px;
+      text-align: center;
+      white-space: nowrap;
+      background-color:lightgray;
+    }
+
+    .btn input {
+      width: 100%;
+      padding-left: 10px;
+      font: inherit;
+      outline:none;
+    }
+    
+    .btn input:focus {
+      box-shadow:0 0 0 2px lightblue;      
+    }
+
+
+    .btn .left {
+      border-top-left-radius: 6px;
+      border-bottom-left-radius: 6px;
+    }
+
+    .btn .right {
+      border-left: none;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+    }
+    .table1 {
+      border-collapse:collapse;
+    }
+
+    .table1 th,.table1 td{
+      text-align:left;
+      padding:12px;width:15vw;
+    }
+
+    .table1 thead {
+      border-bottom:3px solid red;
+      border-top:2px solid red;
+    }
+
+    .table1 tr {
+      border-bottom:2px solid red
+    }
+
+    .table2 {border-collapse:collapse;
+    }
+
+    .table2 th,.table2 td{
+      text-align:left;
+      padding:12px;width:15vw;
+    }
+
+    .table2 thead {
+      border-bottom:3px solid lightblue;
+      border-top:2px solid lightblue
+    }
+
+    .table2 tr {
+      border-bottom:2px solid lightblue
+    }
+
+    .table2 tbody tr:hover {
+      background-color:lightsalmon;
+    }
+
+    .table3 {
+      border-collapse:collapse;
+      border:2px solid lightgreen;
+    }
+
+    .table3 th,.table3 td{
+      text-align:left;
+      padding:12px;width:15vw;
+      border:1px solid lightgreen;
+    }
+
+    .table3 thead {
+      border-bottom:3px solid lightgreen;
+      }
+
+    .table3 tr {
+      border-bottom:2px solid lightgreen;
+    }
+
+    .table4 {
+      border-collapse:collapse;
+      border:1px solid red}
+
+    .table4 th,.table4 td{
+      text-align:left;
+      padding:12px;width:15vw;
+      border:1px solid red;
+    }
+
+    .table4 thead {
+      border-bottom:2px solid red;
+      background-color:lightblue
+      }
+
+    .table4 tr {
+      border-bottom:1px solid red
+    }
+
+    .table4 tbody tr:nth-child(2n+1){
+      background-color:lightcyan; 
+    }
+
+    .table4 tbody tr:nth-child(2n){
+      background-color:lightblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="btn">
+    <div>
+      <span class="left">Lorem</span>
+      <input class="right">
+    </div>
+  </div>
+  <table class="table1">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <table class="table2">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <table class="table3">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry</td>
+              <td>the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+    <br>
+<table class="table4">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Larry</td>
+        <td>the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
