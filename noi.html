@@ -818,9 +818,9 @@ console.log(sum)
   </script>
   
   <script id="ch0105/18">
-    var n = Number(prompt('n组疗法:'));
-    var sum ='';
-    var result1,result2;
+   var n = Number(prompt('n组疗法:'));
+   var sum ='';
+   var result1,result2;
     if (n>1&&n<=20) {
       for (var i=0;i<n;i++) {
         var total = Number(prompt('第'+(i+1)+'组总病例数:'));
@@ -830,16 +830,15 @@ console.log(sum)
         } else if (i>0) {
           result2 = exam /total ;
           if (result2-result1>0.05){
-            sum +=  'better' + '\n';
+            console.log('better');
           } else if (result2-result1>=0&&result2-result1<=0.05||result1-result2>=0&&result1-result2<=0.05) {
-            sum +=  'same'  + '\n';
+            console.log('same');
           } else if (result1-result2>0.05) {
-            sum +=  'worse' + '\n';
+            console.log('worse');
           }
         }
       }
     } 
-    console.log(sum)
   </script>
   
   <script id="ch0105/19">
