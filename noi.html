@@ -530,15 +530,17 @@
 </script>
 
 <script id="ch0105/02">
-  var sum=0,avg;
+ var sum=0,avg;
   for (var i=0;i<12;i++) {
     balance = Number(prompt('输入第'+(i+1)+'月结余'));
-    if (balance<=1000000){
+    if (balance<=1000000&&balance>0){
     sum += balance;
+    } else {
+      break;
     }
   }
   avg = '$'+ (sum / 12).toFixed(2);
-  alert(avg);
+  console.log(avg);
 </script>
 
 <script id="ch0105/03">
