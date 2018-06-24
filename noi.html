@@ -869,23 +869,29 @@ console.log(sum)
     console.log(dh) 
     console.log(leg)
 </script>
+
+<script id="ch0105/21">
   var N = Number(prompt('N:'));
   var num = N;
   var ev;
-  if (N==1) {
-    console.log('End')
-  } else {
-    for (var i=0;i<100;i++) {
-      if (num%2==1) {
-        num = N * 3 +1;
-        console.log(N +'*3'+'+1'+'='+num) 
-      } else {
-        ev = num*(1/2)**(i)
-        console.log(ev*2 +'/2'+'='+ev) 
-        if (ev==1) {
-          console.log('End')
-          break;
+  if (N>0&&N<=2000000) {
+    if (N==1) 
+      console.log('End')
+    else {
+      for (var i=0;i<100;i++) {
+        if (num%2==1) {
+          num = num * 3 +1;
+          console.log(N +'*3'+'+1'+'='+num) 
+        } else if (num%2==0){
+          ev = num / 2;
+          num = ev;
+          console.log(ev*2 +'/2'+'='+ev) 
+          if (ev==1) {
+            console.log('End')
+            break;
+          }
         }
       }
     }
   }
+</script>
