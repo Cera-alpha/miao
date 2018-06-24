@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script>
+    var x1,x2,x,y;
+    if (confirm('选择二元一次方程，否则为二元一次方程')) {
+    var a = +prompt('a:');
+    var b = +prompt('b:');
+    var c = +prompt('c:');
+    var delta =b*b-4*a*c;
+    var s_delta = Math.sqrt(delta);
+    if (delta>0) {
+      x1=(-b+s_delta)/2/a;
+      x2=(-b+s_delta)/2/a;
+    } else {
+      if (delta==0) {
+        x=(-b+s_delta)/2/a;
+      }
+      else {
+        var c_add1=4*a*c-b*b;
+        var c_add2=(-b/2/a);
+        var x1=c_add2+'+'+(-c_add2)+'*i';
+        var x2=c_add2+''+c_add2+'*i';
+      }
+    }
+    console.log(x1,x2)
+    } else {
+        var a = +prompt('a:');
+        var b = +prompt('b:');
+        var c = +prompt('c:');
+        var d = +prompt('d:');
+        var e = +prompt('e:');
+        var f = +prompt('f:');
+        if ((a/d)!=(b/e)) {
+          y=(f-d/a*c)/(e-d/a*b);
+          x=(c-b*y)/a;
+        }
+        else {
+          if (a/d==b/e==c/f) {
+            alert('有无穷个解');
+          }else if(a/d==b/e!=c/f) {
+            alert('无解');
+          }
+        } 
+      console.log(x,y)
+    }
+  </script>
+</head>
+<body>
+</body>
+</html> 

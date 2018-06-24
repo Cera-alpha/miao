@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,4 +74,81 @@
   }
 
 </script>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>画图</title>
+  <style>
+    canvas {
+      border: 2px solid #f0f;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <canvas width="400" height="300"></canvas>
+</body>
+<script>
+  var cvs = document.querySelector('canvas')
+  var ctx = cvs.getContext('2d')
+
+  function dot(x, y, color = 'black') {
+    ctx.fillStyle = color
+    ctx.fillRect(x, y, 1, 1)
+  }
+
+</script>
+<script>
+  var r = 50;
+  var rx = 100;
+  var ry = 100;
+  var rdeg = Math.PI*2/360;
+  for (var i = 0;i<400;i++) {
+    dot(i,3/4*i,'black');
+  }
+  for (var i = 1;i<361;i++) {
+    dot(rx+r*Math.cos(rdeg*i),ry+r*Math.sin(rdeg*i),'black');
+  }
+  for (var i = 0;i<400;i++) {
+    dot(i,i,'black');
+  }
+  for (var i = 0;i<400;i++) {
+    if (i%2==0) {
+      dot(i,10,'red');
+    }
+  }
+  for (var i = 0;i<400;i++) {
+    dot(i,20,'red')
+    if (i%3==0) {
+      dot(i,20,'white');
+    }
+  }
+  for (var i = 0;i<400;i++) {
+    dot(i,30,'red')
+    if (i%5==0||i%5==1) {
+      dot(i,30,'white');
+    }
+  }
+  for (var i = 0;i<50;i++) {
+    dot(150+i,150,'black');
+    for (var j = 0;j < 50;j++) {
+      dot(150+i,150+j,'black');
+    }
+  }
+  for (var i = 0;i < 50;i++) {
+    var a = 'rgb('+ 255 + ','+ (255-i*5) +','+ i%30 +')';
+    dot(200+i,200,a);
+    dot(200,200+i,b);
+    for (var j = 0;j < 50;j++) {
+      var b = 'rgb(255' + ','+ j%30 +','+ (255-j*5) +')';
+      dot(200+i,200+j,a);
+      dot(200+j,200+i,b);
+    }
+  }
+
+</script>
+>>>>>>> 9ec9713f606dfda1e2ab5f79254db4f5996a4448
 </html>

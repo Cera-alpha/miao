@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>核按钮</title>
+  <style>
+
+    #tw-btn {width:150px;height:150px;background:rgba(214, 179, 108, 0.425);
+    position: relative;border-radius: 20px;display: inline-block;margin:20px 40px;}
+
+    div#tw-btn label {position: absolute;top: 25px;left:25px;}
+
+    div.total div {
+      background-image:url(https://abs.twimg.com/a/1526339738/img/animations/web_heart_animation_edge.png);
+      width:100px;height:100px;
+      background-repeat:no-repeat;
+      position:absolute;
+      background-color: rgb(255, 255, 255);color:rgb(154, 161, 161);
+      border-radius: 100px;}
+
+    div.total div:not(:first-child) {opacity:0}
+    #twi {display: none}
+    .tw2 {background-position: -100px 0px;
+      transition:all 10ms  10ms;}
+    .tw3 {background-position: -200px 0px;
+      transition:all 20ms  20ms;}
+    .tw4 {background-position: -300px 0px;
+      transition:all 30ms  30ms;}
+    .tw5 {background-position: -400px 0px;
+      transition:all 40ms  40ms;}
+    .tw6 {background-position: -500px 0px;
+      transition:all 50ms  50ms;}
+    .tw7 {background-position: -600px 0px;
+      transition:all 60ms  60ms;}
+    .tw8 {background-position: -700px 0px;
+      transition:all 70ms  70ms;}
+    .tw9 {background-position: -800px 0px;
+      transition:all 80ms  80ms;}
+    .tw10 {background-position: -900px 0px;
+      transition:all 90ms  90ms;}
+    .tw11 {background-position: -1000px 0px;
+      transition:all 100ms  100ms;}
+    .tw12 {background-position: -1100px 0px;
+      transition:all 110ms  110ms;}
+    .tw13 {background-position: -1200px 0px;
+      transition:all 120ms  120ms;}
+    .tw14 {background-position: -1300px 0px;
+      transition:all 130ms  130ms;}
+    .tw15 {background-position: -1400px 0px;
+      transition:all 140ms  140ms;}
+    .tw16 {background-position: -1500px 0px;
+      transition:all 150ms  150ms;}
+    .tw17 {background-position: -1600px 0px;
+      transition:all 160ms  160ms;}
+    .tw18 {background-position: -1700px 0px;
+      transition:all 170ms  170ms;}
+    .tw19 {background-position: -1800px 0px;
+      transition:all 180ms  180ms;}
+    .tw20 {background-position: -1900px 0px;
+      transition:all 200ms  200ms;}
+    .tw21 {background-position: -2000px 0px;
+      transition:all 210ms  210ms;}
+    .tw22 {background-position: -2100px 0px;
+      transition:all 220ms  220ms;}
+    .tw23 {background-position: -2200px 0px;
+      transition:all 230ms  230ms;}
+    .tw24 {background-position: -2300px 0px;
+      transition:all 240ms  240ms;}
+    .tw25 {background-position: -2400px 0px;
+      transition:all 250ms  250ms;}
+    .tw26 {background-position: -2500px 0px;
+      transition:all 260ms  260ms;}
+    .tw27 {background-position: -2600px 0px;
+      transition:all 270ms  270ms;}
+    .tw28 {background-position: -2700px 0px;
+      transition:all 280ms  280ms;}
+    .tw29 {background-position: -2800px 0px;
+      transition:all 290ms  290ms;}
+
+    #twi:checked + label div.total div {opacity:1}
+
+    /***************************以下是IOS按钮*****************************/
+    input {
+      display:none;}
+    
+    #btn-ios {
+      width:150px;height:150px;
+      background:rgb(73, 72, 70);
+      position: relative;
+      border-radius: 20px;
+      margin:20px 40px;
+      display: inline-block;}
+
+    div#btn-ios label {
+      position: absolute;
+      top: 30%;left:20%;}
+      
+    .back {
+      background-color:rgb(255,255,255);
+      width:90px;height:50px;
+      border-radius:9999px;
+      position:relative;overflow:hidden;
+      box-shadow:inset 0 0 1px 2px #ccc}
+
+    .circle {  
+      width:48px;height:48px;
+      background-color:rgb(252,252,252);
+      border-radius:50%;margin:1.5px;
+      position:absolute;
+      left:0px;z-index:999;
+      box-shadow:inset 0px 0px 1px 1px gray;
+      transition: left 0.5s ease;}
+      .col {width:100px;height:50px;
+      background:rgb(110,220,96);
+      border-radius:9999px;
+      position:absolute;left:-100px;
+      transition:all 1s ease;}
+
+    .col {
+      width:100px;height:50px;
+      background:rgb(110,220,96);
+      border-radius:9999px;position:absolute;
+      left:-100px;
+      transition:all 0.7s ease;}  
+
+    .bai {
+      width:70px;height:50px;border-radius:9999px;
+      background-color:white;
+      position:absolute;left:25px;
+      transition:all 1.5s ease;margin:0;padding:0;}
+    
+    .hui {
+      width:100px;height:50px;border-radius:9999px;
+      background-color:gray;margin:0;padding:0;
+      position:absolute;left:0px;
+      transition:all 1.5s ease;
+      opacity:0;}
+
+    div input#ios:checked+label div.back .circle {
+      left:40px;}
+
+    div input#ios:checked+label div.back .shadow {
+      transform:scale(150);background-color:rgb(110,220,96);opacity:1;
+      }
+    div input#ios:checked+label div.back .col {
+      left:0px;z-index:999;}
+
+    div input#ios:checked+label .bai{
+      transform:scale(0.0001);opacity:1;}
+
+    div input#ios:checked+label .hui{
+      background-color:white;opacity:1;}
+
+  </style>
+</head>
+<body>
+  <div id="tw-btn">
+    <input type="checkbox" id="twi">
+    <label for="twi">
+      <div class="total">
+        <div class="tw1"></div>
+        <div class="tw2"></div>
+        <div class="tw3"></div>
+        <div class="tw4"></div>
+        <div class="tw5"></div>
+        <div class="tw6"></div>
+        <div class="tw7"></div>
+        <div class="tw8"></div>
+        <div class="tw9"></div>
+        <div class="tw10"></div>
+        <div class="tw11"></div>
+        <div class="tw12"></div>
+        <div class="tw13"></div>
+        <div class="tw14"></div>
+        <div class="tw15"></div>
+        <div class="tw16"></div>
+        <div class="tw17"></div>
+        <div class="tw18"></div>
+        <div class="tw19"></div>
+        <div class="tw20"></div>
+        <div class="tw21"></div>
+        <div class="tw22"></div>
+        <div class="tw23"></div>
+        <div class="tw24"></div>
+        <div class="tw25"></div>
+        <div class="tw26"></div>
+        <div class="tw27"></div>
+        <div class="tw28"></div>
+        <div class="tw29"></div>
+      </div>
+    </label>
+  </div>
+
+  <div id="btn-ios">
+    <input type="checkbox" id="ios" />
+    <label for="ios">
+    <div class="back">
+      <div class="col"></div>
+      <div class="circle"></div>
+      <div class="hui"></div>
+      <div class="bai"></div>
+    </label>
+  </div>
+
+</body>
+</html>

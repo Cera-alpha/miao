@@ -1,0 +1,869 @@
+<script id="ch0103/01">
+  var a = Number(prompt('a:'));
+  var b = Number(prompt('b:'));
+  var c = parseInt(a+b);
+  console.log(c);
+</script>
+
+<script id="ch0103/02">
+  var a = Number(prompt('a:'));
+  var b = Number(prompt('b:'));
+  var c = Number(prompt('c:'));
+  if (a>-10000&&a<10000&&b>-10000&&b<10000&&c>-10000&&c<10000) {
+  var result = (a + b) * c;
+  console.log(result);
+  }
+</script>
+
+<script id="ch0103/03">
+  var a = Number(prompt('a:'));
+  var b = Number(prompt('b:'));
+  var c = Number(prompt('c:'));
+  if (a>-10000&&a<10000&&b>-10000&&b<10000&&c>-10000&&c<10000) {
+  var result = parseInt((a + b) / c);
+  console.log(result);}
+</script>
+
+<script id="ch0103/04">
+  var a = Number(prompt('被除数:'));
+  var b = Number(prompt('除数:'));
+  var c,d;
+  if (b>0) {
+    c = parseInt(a / b);
+    d = a % b;
+  console.log(c)
+  console.log(d)
+  }
+ </script>
+
+<script id="ch0103/05">
+  var a = Number(prompt('被除数:'));
+  var b = Number(prompt('除数:'));
+  var c = (a/b).toFixed(9);
+  console.log(c)
+</script>
+
+<script id="ch0103/06">
+  var a = Number(prompt('确诊数:'));
+  var b = Number(prompt('死亡数:'));
+  var c = (b/a*100).toFixed(3)+'%';
+  console.log(c)
+</script>
+  
+  <script id="ch0103/07">
+    var x = Number(prompt('x:'));
+    var a = Number(prompt('a:'));
+    var b = Number(prompt('b:'));
+    var c = Number(prompt('c:'));
+    var d = Number(prompt('d:'));
+    var fx = (a * x ** 3 + b * x ** 2 + c*x + d).toFixed(7);
+    console.log(fx)
+  </script>
+  
+  <script id="ch0103/08">
+    var F = Number(prompt('F:'));
+    var C = (5 * (F - 32) / 9).toFixed(5);
+    console.log(C)
+  </script>
+  
+  <script id="ch0103/09">
+    var r = Number(prompt('半径r:'));
+    if(r>0&&r<=10000) {
+      var diameter = (2 * r).toFixed(4);
+      var perimeter = (2 * 3.14159 * r).toFixed(4);
+      var acreage = ( 3.14159 * r ** 2).toFixed(4);
+    }
+    console.log(diameter,perimeter,acreage)
+  </script>
+  
+  <script id="ch0103/10">
+    var r1 = Number(prompt('r1:'));
+    var r2 = Number(prompt('r2:'));
+    var R  = (1 / (1 / r1 + 1 / r2)).toFixed(2);
+    console.log(R);
+  </script>
+
+<script id="ch0103/11">
+  var a = Number(prompt('a:'));
+  var b = Number(prompt('b:'));
+  var y  = (a%b).toFixed(4);
+  console.log(y);
+</script>
+
+<script id="ch0103/12">
+  var r = Number(prompt('r:'));
+  if (r<=100&&r>0) {
+  var V  = (4/3*3.14*r**3).toFixed(2);
+  } else {
+    console.log('数值超过范围');
+  }
+  console.log(V);
+</script>
+
+<script id="ch0103/13">
+  var n = Number(prompt('n:'));
+  if(n>99&&n<1000) {
+    var a = n % 100;
+    var num1 = parseInt(n / 100);
+    var num2 = parseInt(a / 10);
+    var b = a % 10;
+    var result = b + ''+ num2 +''+ num1;
+    console.log(result)
+  }
+</script>
+
+<script id="ch0103/14">
+  var h = Number(prompt('h:'));
+  var r = Number(prompt('r:'));
+  var num  = Math.ceil((20/((Math.PI*r**2*h) / 1000)));
+  console.log(num);
+</script>
+
+<script id="ch0103/15">
+  var n = Number(prompt('n:'));
+  var x = Number(prompt('x:'));
+  var y = Number(prompt('y:'));
+  if (y < n * x) {
+  var remain  = Math.floor(n-y/x);
+  console.log(remain);
+  }
+</script>
+
+<script id="ch0103/16">
+  var Xa = Number(prompt('A的X坐标Xa:'));
+  var Ya = Number(prompt('A的Y坐标Ya:'));
+  var Xb = Number(prompt('B的X坐标Xb:'));
+  var Yb = Number(prompt('B的Y坐标Yb:'));
+  if (Math.abs(Xa)<1000&&Math.abs(Ya)<1000&&Math.abs(Xb)<1000&&Math.abs(Yb)<1000) {
+    var distance = (Math.sqrt((Math.abs(Xa - Xb))**2 + Math.sqrt((Math.abs(Xa - Xb))**2))).toFixed(3);
+  }
+  console.log(distance)
+</script>
+
+<script id="ch0103/17">
+  var x1 = Number(prompt('x1:'));
+  var y1 = Number(prompt('y1:'));
+  var x2 = Number(prompt('x2:'));
+  var y2 = Number(prompt('y2:'));
+  var x3 = Number(prompt('x3:'));
+  var y3 = Number(prompt('y3:'));
+  var acreage = ((x1 * y2 + x2 * y3 + x3 * y1 - x1 * y3 - x2 * y1 - x3 * y2) / 2).toFixed(2);
+  console.log(acreage)
+</script>
+
+<script id="ch0103/18">
+  var a1 = Number(prompt('a1:'));
+  var a2 = Number(prompt('a2:'));
+  var n = Number(prompt('n:'));
+  var an;
+  if (-100<=a1&&a2<=100&&n>0&&n<=1000) {
+    an = a1 + (n - 1)*(a2 -a1);
+  }
+  console.log(an)
+</script>
+
+<script id="ch0103/19">
+  var A = Number(prompt('A:'));
+  var B = Number(prompt('B:'));
+  var result = 0;
+  if (A>=1&&B<=50000) {
+    result = A * B;
+  }
+  console.log(result)
+</script>
+
+<script id="ch0103/20">
+
+  var n = Number(prompt('n:'));
+  var result;
+  if (n>=0&&n<31) {
+    result = 2**n;
+  }
+  console.log(result);
+</script>
+
+<script id="ch0104/01">
+  var N = Number(prompt('N:'));
+  if (N>=-(10**9)&&N<=10**9) {
+    if (N>0) 
+      console.log ('positive')
+    else if (N==0) 
+      console.log ('zero')
+    else if (N<0) 
+      console.log ('negative')
+  }
+</script>
+
+<script id="ch0104/02">
+  var N = Number(prompt('N:'));
+  if (Math.abs(N)<10000) {
+    console.log((Math.abs(N)).toFixed(2))
+  }
+</script>
+
+<script id="ch0104/03">
+  var n = Number(prompt('n:'));
+  if (n%2==1) 
+    console.log('odd');
+  else 
+    console.log('even');
+</script>
+
+<script id="ch0104/04">
+  var str = (prompt('字符:'));
+  var asc = str.charCodeAt();
+  if (asc%2==1) 
+    console.log('YES');
+  else 
+    console.log('NO');
+</script>
+
+<script id="ch0104/05">
+  var x = Number(prompt('x:'));
+  var y = Number(prompt('y:'));
+  if (x>=0&&x<x**32&&y>=-(2**31)&&y<=2**31) {
+    if (x>y) 
+      console.log('>');
+    else if (x==y) 
+      console.log('=');
+    else if (x<y) 
+      console.log('<');
+  }
+</script>
+
+<script id="ch0104/06">
+  var n = Number(prompt('n:'));
+  if (n>0&&n<=1000) {
+    if (n>=10&&n<=99)
+      console.log('1');
+    else 
+      console.log('0');
+  }
+</script>
+<script id="ch0104/07">
+  var a = Number(prompt('a:'));
+  var b = Number(prompt('b:'));
+  if(Math.floor(a/10)>0||Math.floor(b/20)>0) 
+    console.log('1');
+  else 
+    console.log('0');
+</script>
+
+<script id="ch0104/08">
+  var n = Number(prompt('n:'));
+  if (n>=-(10**6)&&n<=10**6) {
+    if (n%3==0){
+      if (n%5==0) 
+        console.log('YES');
+      else 
+        console.log('NO');
+    }
+    else 
+      console.log('NO');
+  }
+</script>
+
+<script id="ch0104/09">
+  var n = Number(prompt('n:'));
+  if (n%3==0){
+    if (n%5==0) {
+      if (n%7==0) 
+        console.log('3'+' '+'5'+' '+'7');
+      else 
+        console.log('3'+' '+'5');
+    } else if (n%7==0) 
+        if (n%5!=0) 
+          console.log('3'+' '+'7'); 
+      else if (n%7!=0&&n%5!=0) 
+        console.log(n);
+  } else if (n%5==0) 
+      if (n%7==0) 
+        console.log('5'+' '+'7');
+      else 
+        console.log(n);  
+  if (n%3!=0&&n%5!=0&&n%7!=0)
+    console.log('n');
+</script>
+
+<script id="ch0104/10">
+  var y = Number(prompt('语文:'));
+  var s = Number(prompt('数学:'));
+  if (y>=0&&y<=100&&s>=0&&s<=100) 
+    if (y<60||s<60)
+      console.log('1');
+</script>
+
+<script id="ch0104/11">
+  var n = Number(prompt('星期:'));
+   switch (n) {
+      case 1:
+        console.log('NO');
+        break;
+      case 2:
+        console.log('YES');
+        break;
+      case 3:
+        console.log('NO');
+        break;
+      case 4:
+        console.log('YES');
+        break;
+      case 5:
+        console.log('NO');
+        break;
+      case 6:
+        console.log('YES');
+        break;
+      case 7:
+        console.log('YES');
+        break;
+   }
+</script>
+
+<script id="ch0104/12">
+
+  var dis = Number(prompt('距离:'));
+  var wtime = dis / 1.2 ;
+  var btime = 50 + dis /  3;
+  if (wtime==btime) 
+    console.log('All');
+  else if (wtime>btime)
+    console.log('Bike');
+  else if (wtime<btime)
+    console.log('Walk');
+</script>
+
+<script id="ch0104/13">
+  var N = Number(prompt('a:'));
+  var y;
+  var x;
+  if (N>=0&&N<20) {
+    if (N<5)
+      y = -N +  2.5;
+    else if (N>=5&&N<10)
+      y = 2 - 1.5 * (N - 3) * (N - 3);
+    else if (N >= 10)
+      y = N / 2 - 1.5;
+  }
+  console.log(y.toFixed(3));
+</script>
+
+<script id="ch0104/14">
+  var k = Number(prompt('重量:'));
+  var j = (prompt('加急？:'));
+  var exes;
+  var overs;
+  if (j=='y') {
+    if (k<=1000) {
+      exes = 13;
+    } else {
+      overs = Math.ceil((k - 1000) / 500) * 4;
+      exes = 13 + overs; 
+    }
+  } else if (j=='n') {
+    if (k<=1000) {
+      exes = 8;
+    } else if (k>1000) {
+      overs = Math.ceil((k - 1000) / 500) * 4;
+      exes =  overs + 8; 
+    }
+  }
+  console.log(exes)
+</script>
+
+<script id="ch0104/15">
+  var a = Number(prompt('a:'));
+  var b = Number(prompt('b:'));
+  var c = Number(prompt('c:'));
+  var max;
+  if (a>b) {
+    if (a>c)
+      max = a;
+    else if (a<c) 
+      max = c;
+  } else if(b>a){
+    if (b>c)
+      max = b;
+    else if (b<c)
+      max = c;
+    }
+  else if (c>a){
+    if (c>b) 
+      max = c;
+    else if (c<b) 
+      max = b;
+  }
+  console.log(max)
+</script>
+
+<script id="ch0104/16">
+  var a = Number(prompt('a:'));
+  var b = Number(prompt('b:'));
+  var c = Number(prompt('c:'));
+  if (a+b>c) {
+    if (a+c>b) {
+      if (b+c>a) {
+        console.log('yes')
+      }
+    }
+  }
+</script>
+
+<script id="ch0104/17">
+  var a = Number(prompt('年份:'));
+  if (a>0&&a<3000) {
+    if (a%4==0) {
+      if (a%100!=0) { 
+        console.log('Y');
+      }else if (a%100==0&&a%400==0){
+        if (a%3200!=0) {
+        console.log('Y');
+        }
+      }
+      else if (a%3200==0) {
+        console.log('N');
+      }
+    } else {
+        console.log('N');
+    }
+  }
+</script>
+
+<script id="ch0104/18">
+  var x = Number(prompt('x:'));
+  var y = Number(prompt('y:'));
+  if (x>=-1&&x<=1&&y>=-1&&y<=1) {
+    console.log('yes');
+  } else {
+    console.log('no');
+  }
+
+</script>
+
+<script id="ch0104/19">
+  var a = Number(prompt('a:'));
+  var b = Number(prompt('b:'));
+  var o = prompt('b:');
+  var result;
+  if (o!='*'||o!='/'||o!='+'||o!='-') {
+    if (b != 0){
+      switch (o) {
+        case '*':
+        result = a * b;
+        break;
+        case '/':
+        result = a / b;
+        break;
+        case '+':
+        result = a + b;
+        break;
+        case '-':
+        result = a - b; 
+        break;
+      }
+    } else if (b==0) {
+        console.log('Divided by zero!')
+    }
+  } else {
+    console.log('Invalid operator')
+  }
+  console.log(result)
+</script>
+
+<script id="ch0104/20">
+
+    var x1,x2,x;
+    var a = +prompt('a:');
+    var b = +prompt('b:');
+    var c = +prompt('c:');
+    var delta =b*b-4*a*c;
+    var s_delta = Math.sqrt(delta);
+    if (delta>0) {
+      x1=((-b+s_delta)/2/a).toFixed(5);
+      x2=((-b-s_delta)/2/a).toFixed(5);
+    } else if (delta==0){
+        x1 = ((-b + s_delta)/2/a).toFixed(5);
+        x2 = ((-b - s_delta)/2/a).toFixed(5);
+      }
+      else if (delta<0){
+        var c_add1 = (Math.sqrt(4 * a * c - b * b))/ 2 / a ;
+        var c_add2 = (-b / 2 / a).toFixed(5);
+        var c_x1 =(-c_add1).toFixed(5)+'i';
+        var c_x2 = c_add1.toFixed(5) + 'i';
+        var x1 = 'x1=' + c_add2 +''+ c_x1;
+        var x2 = 'x2=' + c_add2 +'+'+ c_x2;
+      }
+      if (x1==x2) {
+        var result = 'x1='+'x2='+x1
+        console.log(result)
+      } else {
+        console.log(x1)
+        console.log(x2)
+      }
+</script>
+
+<script id="ch0104/21">
+  var n = Number(prompt('n:'));
+  var x = Number(prompt('x:'));
+  var y = Number(prompt('y:'));
+  var result = n - Math.ceil( y / x);
+  if (result<1) 
+    console.log('none')
+  else
+  console.log(result)
+</script>
+
+<script id="ch0105/01">
+  var num = Number(prompt('学生人数:'));
+  var sum=0,avg;
+  if (num>=1&&num<=100) {
+    for(var i = 0;i<num;i++) {
+      var age = Number(prompt('第'+(i+1)+'个学生年龄:'));
+      if (age>=15&&age<=25) {
+        sum += age;
+        avg = (sum / num).toFixed(2);
+      } else if(age<15||age>25){
+      }
+    }
+  } 
+  console.log(avg)
+</script>
+
+<script id="ch0105/02">
+  var sum=0,avg;
+  for (var i=0;i<12;i++) {
+    balance = Number(prompt('输入第'+(i+1)+'月结余'));
+    if (balance<=1000000){
+    sum += balance;
+    }
+  }
+  avg = '$'+ (sum/12).toFixed(2);
+  alert(avg);
+</script>
+
+<script id="ch0105/03">
+  var n = Number(prompt('样本容量n:'));
+  var sum = 0,avg = 0;
+  if (n>0&&n<100) {
+    for (var i=0;i<n;i++) {
+      var k = Number(prompt('第'+ (i+1)+'个样本值:'));
+      if (Math.abs(k)<1000) {
+        sum += k;
+        avg = (sum / n).toFixed(4);
+      } else {
+        alert('k超出范围');
+      }
+    }
+  } else {
+      alert('n超出范围');
+  }
+  console.log(avg)
+</script>
+
+<script id="ch0105/04">
+  var n = Number(prompt('n个整数:'));
+  var sum = 0,avg = 0;
+  if (n>=1&&n<=10000) {
+    for (var i=0;i<n;i++) {
+      var k = Number(prompt('第'+ (i+1)+'个整数:'));
+      if (Math.abs(k)<10000) {
+        sum += k;
+        avg = (sum / n).toFixed(5);
+      } else {
+        break;
+      }
+    }
+  } 
+  console.log(sum)
+  console.log(avg)
+</script>
+
+<script id="ch0105/05">
+  var n = Number(prompt('n个学生:'));
+  var smax=0;
+  if (n>0&&n<=100) {
+    for (var i=0;i<n;i++) {
+      var score = Number(prompt('第'+ (i+1)+'个学生分数:'));
+      if (score>=0&&score<=100) {
+        if (score > smax){
+          smax = score ;
+        }
+      } else {
+        alert('分数超出范围');
+      }
+    }
+  } else {
+      alert('人数超出范围');
+  }
+  console.log(smax)
+</script>
+
+<script id="ch0105/06">
+  var n = Number(prompt('长度:'));
+  var smax = 0,smin = Infinity;
+  var skip;
+  if (n>0&&n<=1000) {
+    for (var i=0;i<n;i++) {
+      var score = Number(prompt('第'+ (i+1)+'个序列数:'));
+      if (score<=1000) {
+        if (score > smax){
+          smax = score ;
+        } 
+        else if (score < smin) {
+          smin = score;
+        }
+      } else {
+        alert('k超出范围');
+      }
+    }
+  } else {
+      alert('n超出范围');
+  }
+  skip = smax-smin; 
+  console.log(skip)
+</script>
+
+<script id="ch0105/07">
+var n = Number(prompt('n天:'));
+var sum = 0;
+var sumg = 0;
+var sums = 0;
+var sumc = 0;
+if (n>1&&n<=17) {
+  for (var i=0;i<n;i++) {
+    var gold = Number(prompt('第'+ (i+1)+'天金牌:'));
+    var sliver = Number(prompt('第'+ (i+1)+'天银牌:'));
+    var copper = Number(prompt('第'+ (i+1)+'天铜牌:'));
+    sumg += gold;
+    sums += sliver;
+    sumc += copper;
+  }
+  sum = sumg + sumc +sums;
+} 
+console.log(sumg)
+console.log(sums)
+console.log(sumc)
+console.log(sum)
+</script>
+
+<script id="ch0105/08">
+var n = Number(prompt('n边:'));
+var sum = (n - 2) * 180;
+var remain;
+for (var i=0;i<n-1;i++) {
+  var k = Number(prompt('第'+ (i+1)+'个内角度数:'));
+  sum = sum - k ;
+  remain = sum ;
+}
+console.log(remain)
+</script>
+
+<script id="ch0105/09">
+var m = Number(prompt('m:'));
+var n = Number(prompt('n:'));
+var sum=0;
+if (m>=0&&n>=m&&n<=300) {
+  for(var i=0;i<(n-m+1);i++) {
+    if ((m+i)%2==1) {
+      sum += m+i ;
+    }
+  }
+} else {
+  alert('m与n的值不符合要求')
+}
+console.log(sum)
+</script>
+
+<script id="ch0105/10">
+var m = Number(prompt('m:'));
+var n = Number(prompt('n:'));
+var sum=0;
+if (m>0&&n>m&&n<1000) {
+  for(var i=0;i<(n-m+1);i++) {
+    if ((m+i)%17==0) {
+      sum += m+i ;
+    }
+  }
+} else {
+  alert('m与n的值不符合要求')
+}
+console.log(sum)
+</script>
+
+<script id="ch0105/11">
+    var k = Number(prompt('k个整数:'));
+    var sum1 = 0;
+    var sum5 = 0;
+    var sum10 = 0;
+    if (k>1&&k<=100) {
+      for (var i=0;i<k;i++) {
+        var num = Number(prompt('第'+ (i+1)+'个整数:'));
+        if (num>=1&&num<=10) {
+          if (num==1) {
+            sum1++;
+          } else if (num==5) {
+            sum5++;
+          } else if (num==10) {
+            sum10++;
+          }
+        } 
+        }
+      }
+    console.log(sum1)
+    console.log(sum5)
+    console.log(sum10)
+  </script>
+  
+  <script id="ch0105/12">
+
+    var N = Number(prompt('n个整数:'));
+    var m = Number(prompt('比较数字m:'));
+    var sum = 0;
+    if (N<=100) {
+      for (var i=0;i<N;i++) {
+        var k = Number(prompt('第'+ (i+1)+'个整数:'));
+        if (k===m) 
+         sum++; 
+      }
+    } else 
+        alert('N超出范围');
+    console.log(sum)
+  </script>
+  
+  <script id="ch0105/13">
+    var a = Number(prompt('a:'));
+    var n = Number(prompt('n:'));
+    var sum = 1;
+    if (a>=-(10**6)&&a<=10**6&&n>=1&&n<=10**4) {
+      for(var i=0;i<n;i++) {
+      sum *= a;
+      }
+    } else {
+        alert('超出范围');
+    }
+    console.log(sum)
+  </script>
+  
+  <script id="ch0105/14">
+    var x = Number(prompt('人口数量:'));
+    var n = Number(prompt('年数:'));
+    var sum = 0;
+    var ins = 1;
+    if (x<=100&&x>=1&&n>=1&&n<=100) {
+      for(var i=0;i<n;i++) {
+        ins *= 1.001;
+      }
+      sum = (ins * x).toFixed(4);
+    } else {
+        alert('超出范围');
+    }
+    console.log(sum)
+  </script>
+  
+  <script id="ch0105/15">
+    var R = Number(prompt('复合利率:'))/100;
+    var M = Number(prompt('本金:'));
+    var Y = Number(prompt('年数:'));
+    var sum = 0;
+    var ins = 1;
+    if ((R>=0&&R<=20)&&(M>=100&&M<=10**6)&&(Y>=0&&Y<=400)) {
+      for(var i=0;i<Y;i++) {
+        ins *= (1+R);
+      }
+      sum = parseInt(M * ins);
+    } else {
+        alert('超出范围');
+    }
+    console.log(sum)  
+  </script>
+
+  <script id="ch0105/16">
+    var N = Number(prompt('年薪:'));
+    var K = Number(prompt('增长率:'))/100;
+    var sum = 0;
+    var ins = 1;
+    var price = 200;
+    var total = 0;
+    if ((N>=10&&N<=50)&&(K>=0.01&&K<=0.2)) {
+      for (var i=0;i<120;i++) {
+        ins = K*i+1;
+        sum = N*i;
+        total = price * ins;
+        if (sum>total) {
+          break;
+        }
+      }
+    } else {
+        alert('超出范围');
+    }
+    console.log(i+1)
+  </script>
+  
+  <script id="ch0105/17">
+    var k = Number(prompt('正整数:'));
+    var sum = 0;
+    var add1 = 1;
+    var add2 = 2;
+    var add = 0;
+    if (k>=1&&k<=46) {
+      for (var i=0;i<k-3;i++) {
+        add = add1 + add2;
+        add1 = add2;
+        add2 = add;
+      }
+    } 
+    console.log(add)
+  </script>
+  
+  <script id="ch0105/18">
+    var n = Number(prompt('n组疗法:'));
+    var sum = '结果：'+ '\n';
+    var result1,result2;
+    if (n>1&&n<=20) {
+      for (var i=0;i<n;i++) {
+        var total = Number(prompt('第'+(i+1)+'组总病例数:'));
+        var exam = Number(prompt('第'+(i+1)+'组疗效有效数:'));
+        if (i==0) {
+          result1 = exam / total ;
+        } else if (i>0) {
+          result2 = exam /total ;
+          if (result2-result1>0.05){
+            sum +=  'better' + '\n';
+          } else if (result2-result1>=0&&result2-result1<=0.05||result1-result2>=0&&result1-result2<=0.05) {
+            sum +=  'same'  + '\n';
+          } else if (result1-result2>0.05) {
+            sum +=  'worse' + '\n';
+          }
+        }
+      }
+    } 
+    console.log(sum)
+  </script>
+  
+  <script id="ch0105/19">
+    var n = Number(prompt('屋顶数量:'));
+    var sum = 0;
+    var total = 0;
+    var number;
+    for (var i=0;i<n;i++) {
+      var x = Number(prompt('第'+(i+1)+'个屋顶x轴坐标：'));
+      var y = Number(prompt('第'+(i+1)+'个屋顶y轴坐标：'));
+      number = Number(prompt('该屋顶人数:'));
+      var need_time = ((Math.sqrt(x ** 2 + y **2))/50)*2;
+      sum = Math.ceil(number * 1.5 + need_time);
+    }
+    console.log(sum) 
+  </script>
+  
+  <script id="ch0105/20">
+    var h = Number(prompt('高度:'));
+    var dh = 0;
+    var leg;
+    for (var i=0;i<10;i++) {
+      leg = ((1/2)**i)*h;
+      dh += leg + ((1/2)**(i+1))*h;
+    }
+    leg = (((1/2)**10)*h).toFixed(7);
+    dh = (dh - (1/2)**10*h).toFixed(4);
+    console.log(dh,leg) 
+  </script>
