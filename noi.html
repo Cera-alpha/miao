@@ -895,3 +895,28 @@ console.log(sum)
     }
   }
 </script>
+
+
+<script id="ch0105/22">
+  var charge;
+  var add=0;
+  var add1=0;
+  var remain2=0;
+  for(var i=0;i<12;i++) {
+    var m = Number(prompt((i+1)+'月零钱:'));
+    charge = 300 - m;
+    add = parseInt(((charge+remain2)/100))*100;
+    add1 += add;
+    remain2 += charge-add;
+    if (charge<0) {
+      if (remain2<0) {
+        console.log(-(i+1))
+        break;
+      } 
+    } else {
+      if(i==11) {
+          console.log(add1 * 1.2+remain2)
+        }
+    }
+  }
+</script>
