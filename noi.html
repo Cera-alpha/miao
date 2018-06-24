@@ -73,7 +73,9 @@
       var perimeter = (2 * 3.14159 * r).toFixed(4);
       var acreage = ( 3.14159 * r ** 2).toFixed(4);
     }
-    console.log(diameter,perimeter,acreage)
+    console.log(diameter)
+    console.log(perimeter)
+    console.log(acreage)
   </script>
   
   <script id="ch0103/10">
@@ -471,35 +473,34 @@
 </script>
 
 <script id="ch0104/20">
-
-    var x1,x2,x;
-    var a = +prompt('a:');
-    var b = +prompt('b:');
-    var c = +prompt('c:');
-    var delta =b*b-4*a*c;
-    var s_delta = Math.sqrt(delta);
-    if (delta>0) {
-      x1=((-b+s_delta)/2/a).toFixed(5);
-      x2=((-b-s_delta)/2/a).toFixed(5);
-    } else if (delta==0){
-        x1 = ((-b + s_delta)/2/a).toFixed(5);
-        x2 = ((-b - s_delta)/2/a).toFixed(5);
-      }
-      else if (delta<0){
-        var c_add1 = (Math.sqrt(4 * a * c - b * b))/ 2 / a ;
-        var c_add2 = (-b / 2 / a).toFixed(5);
-        var c_x1 =(-c_add1).toFixed(5)+'i';
-        var c_x2 = c_add1.toFixed(5) + 'i';
-        var x1 = 'x1=' + c_add2 +''+ c_x1;
-        var x2 = 'x2=' + c_add2 +'+'+ c_x2;
-      }
-      if (x1==x2) {
-        var result = 'x1='+'x2='+x1
-        console.log(result)
-      } else {
-        console.log(x1)
-        console.log(x2)
-      }
+  var x1,x2,x;
+  var a = +prompt('a:');
+  var b = +prompt('b:');
+  var c = +prompt('c:');
+  var delta =b*b-4*a*c;
+  var s_delta = Math.sqrt(delta);
+  if (delta>0) {
+    x1=((-b+s_delta)/2/a).toFixed(5);
+    x2=((-b-s_delta)/2/a).toFixed(5);
+  } else if (delta==0){
+      x1 = ((-b + s_delta)/2/a).toFixed(5);
+      x2 = ((-b - s_delta)/2/a).toFixed(5);
+    }
+    else if (delta<0){
+      var c_add1 = (Math.sqrt(4 * a * c - b * b))/ 2 / a ;
+      var c_add2 = (-b / 2 / a).toFixed(5);
+      var c_x1 =(-c_add1).toFixed(5)+'i';
+      var c_x2 = c_add1.toFixed(5) + 'i';
+      var x1 = 'x1=' + c_add2 +'+'+ c_x2;
+      var x2 = 'x2=' + c_add2 +''+ c_x1;
+    }
+    if (x1==x2) {
+      var result = 'x1='+'x2='+x1
+      console.log(result)
+    } else {
+      console.log(x1)
+      console.log(x2)
+    }
 </script>
 
 <script id="ch0104/21">
@@ -537,7 +538,7 @@
     sum += balance;
     }
   }
-  avg = '$'+ (sum/12).toFixed(2);
+  avg = '$'+ (sum / 12).toFixed(2);
   alert(avg);
 </script>
 
@@ -817,7 +818,7 @@ console.log(sum)
   
   <script id="ch0105/18">
     var n = Number(prompt('n组疗法:'));
-    var sum = '结果：'+ '\n';
+    var sum ='';
     var result1,result2;
     if (n>1&&n<=20) {
       for (var i=0;i<n;i++) {
