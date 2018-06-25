@@ -920,3 +920,97 @@ console.log(sum)
     }
   }
 </script>
+
+<script id="ch0105/23">
+  var m = Number(prompt('药品总量:'));
+  var n = Number(prompt('取药人数:'));
+  var num=0;
+  for (var i=0;i<n;i++) {
+  var k = Number(prompt((i+1)+'个人取药数量:'));
+    m = m-k;
+    if (m<=0) {
+      m=m+k;
+      num++;
+      continue
+    }
+  }
+  console.log(num)
+</script>
+
+<script id="ch0105/24">
+  var n = Number(prompt('小时:'));
+  var num=0;
+  var add=0;
+  var str = [];
+  var max=0;
+  for (var i=0;i<n;i++) {
+    var shou = Number(prompt((i+1)+'次收缩压:'));
+    var shu = Number(prompt((i+1)+'次舒张压:'));
+    if (shou>=90&&shou<=140&&shu>=60&&shu<=90) {
+      num = 1 ;
+      if (num==1) 
+        add++;
+        if (max<add) {
+          max=add;
+        }
+    } else {
+      add = 0;
+    }
+  }
+  console.log(max)
+</script>
+
+<script id="ch0105/25">
+  var a;
+  var b1='',b2='';
+  var c;
+  var e;
+  var f1='',f2='';
+  var g;
+  var p1=0,p2=1,p3=2,p4=3;
+  var cdtion=true;
+  var num;
+  for (var i=49;i<729;i++) {
+    c=i;
+    g=i;
+    b1='',b2='';
+    f1='',f2='';
+    if (cdtion){
+      for (var j=0;j<20;j++) {    
+        a=c%7;
+        c=parseInt(c/7)
+        b1 = a +''+b1;
+        b2 = b2 + '' +a; 
+        if (c==0) {
+          p1=b1;
+          p2=b2;
+        } else if(c==1) {
+          p1=c+''+b1;
+          p2=b2+''+c;
+        }
+
+        e=g%9;
+        g=parseInt(g/9)
+        f1 = e +''+f1;
+        f2 = f2 + '' +e; 
+        if (g==0) {
+          p3=f1;
+          p4=f2;
+        } else if (g==1) {
+          p3=g+''+f1;
+          p4=f2+''+g;
+        }
+        if(p1==p3||p1==p4||p2==p3||p2==p4) {
+          console.log(i)
+          num = i;
+          cdtion = false;
+          break;
+        } 
+      }
+    } else {
+      break;
+    }
+  } 
+  console.log(p1)
+  console.log(p3)
+</script>
