@@ -1236,7 +1236,15 @@ console.log(sum)
   }
 </script>
 <script id="itob" sample-input="123" sample-output="123" comment="数字转换成字符串">
-  
+  var n = Number(prompt('n'))
+  var digit
+  var result =  ''
+  do {
+    digit = n % 10;
+    n = (n - digit) / 10;
+    result = String.fromCharCode(digit + 48) + result;
+  } while (n>0)
+  console.log(result)
 </script>
 <script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
   var a = Number(prompt('a:'));
