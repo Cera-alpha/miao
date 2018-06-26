@@ -1054,20 +1054,21 @@ console.log(sum)
             a = a-num*10**k
           }
           if (sum==n) {
-            console.log('y')
+            console.log('YES')
             cdtion=false;
             break;
           } else if (sum!=n) {
-            console.log('n')
+            console.log('NO')
             cdtion=false;
             break;
           }
         }
       } else if (temp==0) {
-        console.log('n')
+        console.log('NO')
         break
         }
-    }
+  }
+    
 </script>
 <script id="narcissistics" sample-input="" sample-output="" comment="找出100到10000以内所有的水仙花数">
   var temp;
@@ -1104,12 +1105,75 @@ console.log(sum)
     num2=num2*10 + temp%10;
   }
   if(num2==num1)
-      console.log("yes");
+      console.log("YES");
     else
-      console.log("no");
+      console.log("NO");
 </script>
 <script id="weekday" sample-input="2018 6" sample-output="5" comment="输入年份与月份，给出该年该月的第一天是星期几">
-  
+    var n = Number(prompt('年份:'));
+    var m = Number(prompt('月份:'));
+    var b;
+    var c=0;
+    var d;
+    var e=0;
+    var f;
+    var g;
+    for (var i=2000;i<n;i++) {
+      ru (i);
+      if (b==1) {
+        c+=366;
+      } else if (b==0) {
+        c+=365;
+      }
+    }
+    d = ((c%7)+6)%7;
+    ru (n);
+    if (b==1) {
+      for (var k=1;k<m;k++) {
+        if(k==1||k==3||k==5||k==7||k==8||k==10||k==12) {
+          e+=31;
+        }
+        if(k==2) { 
+          e+=29;
+        }
+        if(k==4||k==6||k==9||k==11) {
+        e+=30;
+        }
+      }
+    }
+    if (b==0) {
+      for (var j=1;j<m;j++) {
+        if(j==1||j==3||j==5||j==7||j==8||j==10||j==12) {
+          e+=31;
+        }
+        if(j==2) { 
+          e+=28;
+        }
+        if(j==4||j==6||j==9||j==11) {
+        e+=30;
+        }
+      }
+    }
+    
+    f = ((e%7)+d)%7;
+    console.log(f)
+    function ru (y){
+      if (y%4==0) {
+          if (y%100!==0) { 
+            b=1;
+          }else if (y%100==0&&y%400==0){
+            if (y%3200!=0) {
+            b=1;
+            }
+          }
+          else if (y%3200==0) {
+            b=0;
+          }
+        } else {
+            b=0;
+        }
+       return b; 
+    }
 </script>
 <script id="complete-number" sample-input="6" sample-output="YES" comment="判断一个数是否为完全数">
   debugger
@@ -1175,7 +1239,7 @@ console.log(sum)
   
 </script>
 <script id="lcf&lcm" sample-input="12 9" sample-output="36 3" comment="给定两个数，求它们的最小公倍数和最大公约数">
-    var a = Number(prompt('a:'));
+  var a = Number(prompt('a:'));
   var b = Number(prompt('b:'));
   var c=0;
   var temp;
@@ -1199,8 +1263,8 @@ console.log(sum)
   }
   maxnum=b;
   minnum=temp1*temp2/b;
-  console.log('公倍数:'+minnum)
-  console.log('公约数:'+maxnum)
+  console.log(+minnum)
+  console.log(maxnum)
 </script>
 <script id="7" sample-input="" sample-output="" comment="敲7">
   var a;
