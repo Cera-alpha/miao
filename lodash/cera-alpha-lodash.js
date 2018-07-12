@@ -5,5 +5,5 @@ var cera_alpha = {
         result.push(array.slice(i, size + i));
     }
     return result;
-    },
+    }
 }
