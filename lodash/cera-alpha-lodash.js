@@ -1,4 +1,4 @@
-var Cera_alpha = {
+var cera_alpha = {
   chunk: function(array, size) {
 
   }
