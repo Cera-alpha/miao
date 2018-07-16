@@ -41,7 +41,7 @@ var cera_alpha = {
     for (var key in map) {
       if (key in arg0&&map[key]==1) {
         var temp = key
-        arr.push(Number(temp))
+        arr.push(temp)
       }
     }
     return arr
@@ -66,12 +66,12 @@ var cera_alpha = {
     for (var key in map) {
       if (key in arg0&&map[key]==1) {
         var temp = key
-        arr.push(temp)
+        arr.push(Number(temp))
       }
     }
     return arr
   },
-  drop : function (array, n) {
+  drop : function drop(array, n) {
     var arr
     if (n==null) {
       arr = array.slice(1,array.length) 
@@ -84,15 +84,54 @@ var cera_alpha = {
   },
   dropRight : function (array, n) {
     var arr = []
-    if (!n) {
-      n= 0
-    }
-    if (n!==0) {
-      arr = array.slice(0,n) 
-    } else {
+    if (n==null) {
+      arr = array.slice(0,array.length-1) 
+    } else if (n==0){      
       arr = array
+    } else if (n<array.length&&n>0){
+      arr = array.slice(0,arr.length-n)
     }
     return arr
   },
-  
+  fill : function(array, value, start, end) {
+    if (!start) {
+      start = 0
+    }
+    if (!end) {
+      end = array.length
+    }
+    for (var i=start;i<end;i++) {
+      array[i] = value     
+    }
+  },
+  head : function (array) {
+    return array[0]
+  },
+  flatten : function (array) {
+    var arr =  [] 
+    array.forEach(value => {
+      if (Array.isArray(value)) {
+        value.forEach(item => arr.push(item))
+      } else {
+        arr.push(value)
+      }
+    });
+    return arr
+  },
+  flattenDeep : function (array) {
+    var arr = []
+    arrayElement(array)
+    function arrayElement(array) {
+      array.forEach(item => {
+        if (Array.isArray(item)) 
+          arrayElement(item)
+        else 
+          arr.push(item)   
+      })
+    }
+    return arr
+  },
+  fromPairs : function (pairs) {
+    
+  }
 }
