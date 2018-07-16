@@ -72,10 +72,14 @@ var cera_alpha = {
     return arr
   },
   drop : function (array, n) {
-    if (!n) {
-      n = 0
+    var arr
+    if (n==null) {
+      arr = array.slice(1,array.length) 
+    } else if (n==0){      
+      arr = array
+    } else {
+      arr = array.slice(n,n+1)
     }
-    var arr = array.slice(n,n+1) 
     return arr
   },
   dropRight : function (array, n) {
