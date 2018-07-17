@@ -170,9 +170,6 @@ var cera_alpha = {
     } 
     return arr
   },
-  intersectionBy : function (array, iteratee) {
-    
-  },
   join : function (array, separator) {
     var str = ''
     if (!separator) {
@@ -180,7 +177,7 @@ var cera_alpha = {
     }
     for (var i=0;i<array.length;i++) {
       if (i==array.length-1) str += array[i]
-      else str += array[i] + iteratee
+      else str += array[i] + separator
     }
     return str
   },
@@ -191,10 +188,17 @@ var cera_alpha = {
     if (fromIndex==null) {
       fromIndex = array.length-1
     }
+    var flag = true
     for (var i=fromIndex;i>=0;i--) {
       if (array[i]==value) {
         return i
+        flag = true
+      } else {
+        flag = false
       }
+    }
+    if (!flag) {
+      return -1
     }
   },
   nth : function (array, n) {
@@ -213,11 +217,10 @@ var cera_alpha = {
     }
     for (var i=0;i<array.length;i++) {
       if (array[i] in map == false) {
-        array.splice(i,1)
-        i=i-1
+        arr.push(array.slice(i,i+1))
       }
     }
-    return array
+    return arr
   },
   pullAll : function (array, values) {
     var arr = []
@@ -227,14 +230,10 @@ var cera_alpha = {
     }
     for (var i=0;i<array.length;i++) {
       if (array[i] in map == false) {
-        array.splice(i,1)
-        i=i-1
+        arr.push(array.slice(i,i+1))
       }
     }
-    return array
-  },
-  pullAllWith : function (array, values, comparator) {
-
+    return arr
   },
   pullAt : function (array, indexes) {
     var arr = []
@@ -260,6 +259,6 @@ var cera_alpha = {
     return arr
   },
   reverse : function (array)  {
-    
+
   }
 }
