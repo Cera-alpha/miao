@@ -41,7 +41,7 @@ var cera_alpha = {
     for (var key in map) {
       if (key in arg0&&map[key]==1) {
         var temp = key
-        arr.push(temp)
+        arr.push(Number(temp))
       }
     }
     return arr
