@@ -223,7 +223,7 @@ var cera_alpha = {
     }
     for (var i=0;i<array.length;i++) {
       if (array[i] in map == false) {
-        arr.push(array.slice(i,i+1))
+        arr.push(array.slice(i,i+1)[0])
       }
     }
     return arr
@@ -231,12 +231,12 @@ var cera_alpha = {
   pullAll : function (array, values) {
     var arr = []
     var map = {}
-    for (var i=1;i<values.length;i++) {
+    for (var i=0;i<values.length;i++) {
       map[values[i]] = 1
     }
     for (var i=0;i<array.length;i++) {
       if (array[i] in map == false) {
-        arr.push(array.slice(i,i+1))
+        arr.push(array.slice(i,i+1)[0])
       }
     }
     return arr
