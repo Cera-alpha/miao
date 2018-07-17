@@ -132,6 +132,44 @@ var cera_alpha = {
     return arr
   },
   fromPairs : function (pairs) {
+    var map = {}
+    pairs.forEach(element => {map[element[0]]=element[1]})
+    return map
+  },
+  indexOf : function(array, value, fromIndex) {
+    if (!fromIndex) {
+      fromIndex = 0
+    }
+    for (var i=fromIndex;i<array.length;i++) {
+      if (array[i]==value) return array[i]
+    }
+  },
+  initial : function (array) {
+    var arr = array.slice(0,array.length-1)
+    return arr
+  },
+  intersection : function  ([arrays]) {
+    var arr = []
+    var map = {}
+    var map0 = {}
+    for (var i=0;i<arguments.length;i++) {
+      for (var j=0;j<arguments.length;j++) {
+        if (map[arguments[i][j]]==null) map[arguments[i][j]] = 1
+        else map[arguments[i][j]] += 1
+      }
+    }
+    arguments[0].forEach(element => {
+      if (map0[element]==null) map0[element] = 1
+      else map0[element] += 1
+    })
+    for (var key in map0) {
+      if (key in map&&map[key]==arguments.length) {
+        arr.push(Number(key))
+      }
+    } 
+    return arr
+  },
+  intersectionBy : function (arrays, iteratee) {
     
   }
 }
