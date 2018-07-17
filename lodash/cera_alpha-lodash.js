@@ -103,6 +103,7 @@ var cera_alpha = {
     for (var i=start;i<end;i++) {
       array[i] = value     
     }
+    return array
   },
   head : function (array) {
     return array[0]
@@ -141,7 +142,7 @@ var cera_alpha = {
       fromIndex = 0
     }
     for (var i=fromIndex;i<array.length;i++) {
-      if (array[i]==value) return array[i]
+      if (array[i]==value) return i
     }
   },
   initial : function (array) {
@@ -169,7 +170,96 @@ var cera_alpha = {
     } 
     return arr
   },
-  intersectionBy : function (arrays, iteratee) {
+  intersectionBy : function (array, iteratee) {
+    
+  },
+  join : function (array, separator) {
+    var str = ''
+    if (!separator) {
+      separator = ','
+    }
+    for (var i=0;i<array.length;i++) {
+      if (i==array.length-1) str += array[i]
+      else str += array[i] + iteratee
+    }
+    return str
+  },
+  last : function(array) {
+    return array[array.length-1]
+  },
+  lastIndexOf : function (array, value, fromIndex) {
+    if (fromIndex==null) {
+      fromIndex = array.length-1
+    }
+    for (var i=fromIndex;i>=0;i--) {
+      if (array[i]==value) {
+        return i
+      }
+    }
+  },
+  nth : function (array, n) {
+    if (n==null) {
+      n = 0
+    } else if (n<0) {
+      n = n+array.length
+    }
+    return array[n]
+  },
+  pull : function (array, values) {
+    var arr = []
+    var map = {}
+    for (var i=1;i<arguments.length;i++) {
+      map[arguments[i]] = 1
+    }
+    for (var i=0;i<array.length;i++) {
+      if (array[i] in map == false) {
+        array.splice(i,1)
+        i=i-1
+      }
+    }
+    return array
+  },
+  pullAll : function (array, values) {
+    var arr = []
+    var map = {}
+    for (var i=1;i<values.length;i++) {
+      map[values[i]] = 1
+    }
+    for (var i=0;i<array.length;i++) {
+      if (array[i] in map == false) {
+        array.splice(i,1)
+        i=i-1
+      }
+    }
+    return array
+  },
+  pullAllWith : function (array, values, comparator) {
+
+  },
+  pullAt : function (array, indexes) {
+    var arr = []
+    var temp = []
+    var map = {}
+    if (indexes==null) {
+      return array
+    } else {
+      for (var i=0;i<indexes.length;i++) {
+        arr.push(array.slice(indexes[i],indexes[i]+1))
+      }
+      for (var i=0;i<array.length;i++) {
+        var flag = true
+        for (var j=0;j<indexes.length;j++) {
+          if (i==indexes[j]) {
+            flag = false
+          }
+        }
+        if (flag) temp.push(array[i])
+      }
+      array = temp
+    }
+    return arr
+  },
+  reverse : function (array)  {
     
   }
 }
