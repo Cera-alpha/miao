@@ -177,7 +177,7 @@ var cera_alpha = {
     }
     for (var i=0;i<array.length;i++) {
       if (i==array.length-1) str += array[i]
-      else str += array[i] + separator
+      else str += array[i] + ''+separator
     }
     return str
   },
@@ -185,20 +185,26 @@ var cera_alpha = {
     return array[array.length-1]
   },
   lastIndexOf : function (array, value, fromIndex) {
+    var flag  = true
     if (fromIndex==null) {
       fromIndex = array.length-1
-    }
-    var flag = true
-    for (var i=fromIndex;i>=0;i--) {
-      if (array[i]==value) {
-        return i
-        flag = true
-      } else {
-        flag = false
+    } else if (fromIndex<0) {
+      fromIndex = fromIndex + array.length
+      if (fromIndex<0) {
+        return -1
       }
-    }
-    if (!flag) {
-      return -1
+    } else {
+      for (var i=fromIndex;i>=0;i--) {
+        if (array[i]==value) {
+          return i
+          flag = true
+        } else {
+          flag = false
+        }
+      }
+      if (!flag) {
+        return -1
+      }
     }
   },
   nth : function (array, n) {
@@ -259,6 +265,11 @@ var cera_alpha = {
     return arr
   },
   reverse : function (array)  {
-
-  }
+    for (var i=0;i<array.length/2;i++) {
+      var temp = array[array.length-1-i]
+      array[array.length-1-i] = array[i]
+      array[i] =temp
+    }
+    return array
+  },
 }
