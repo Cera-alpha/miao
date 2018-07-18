@@ -193,18 +193,17 @@ var cera_alpha = {
       if (fromIndex<0) {
         return -1
       }
-    } else {
-      for (var i=fromIndex;i>=0;i--) {
-        if (array[i]==value) {
-          return i
-          flag = true
-        } else {
-          flag = false
-        }
+    }
+    for (var i=fromIndex;i>=0;i--) {
+      if (array[i]==value) {
+        return i
+        flag = true
+      } else {
+        flag = false
       }
-      if (!flag) {
-        return -1
-      }
+    }
+    if (!flag) {
+      return -1
     }
   },
   nth : function (array, n) {
@@ -271,5 +270,68 @@ var cera_alpha = {
       array[i] =temp
     }
     return array
+  },
+  sortedIndex : function (array, value) {
+    for (var i=0;i<array.length;i++) {
+      if (value > array[i]) return i+1
+      else if (value == array[i]) return i
+    }
+  },
+  sortedLastIndexOf : function (array, value) {
+    for (var i=array.length-1;i>=0;i--) {
+      if (array[i]==value) {
+        return i 
+      }
+    }
+  },
+  sortedUniq : function (array) {
+    var num = array[0]
+    var arr = [num]
+    for (var i=0;i<array.length;i++) {
+      if (array[i]!=num) {
+        arr.push(array[i])
+        num = array[i]
+      }
+    }
+    return arr
+  },
+  sortedUniqBy : function (array, iteratee) {
+    var num = array[0]
+    var arr = [num]
+    for (var i = 0; i < array.length; i++) {
+      if (!iteratee) {
+        if (array[i] != num) {
+          arr.push(array[i])
+          num = array[i]
+        }
+      }
+      else {
+        if (iteratee(array[i]) != iteratee(num)) {
+          arr.push(array[i])
+          num = array[i]
+        }
+      }
+    }
+    return arr
+  },
+  tail : function (array) {
+    var arr = array.slice(1,array.length)
+    return arr
+  },
+  take : function (array, n) {
+    var arr = []
+    if (n==null) n = 1
+    else if (n<=0) return arr
+    else if (n>array.length) n = array.length 
+    arr = array.slice(0,n)
+    return arr
+  },
+  takeRight : function (array, n) {
+    var arr = []
+    if (n==null) n = 1
+    else if (n<=0) return arr
+    else if (n>array.length) n = array.length 
+    arr = array.slice(array.length-n,array.length)
+    return arr
   },
 }
