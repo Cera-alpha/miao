@@ -46,31 +46,6 @@ var cera_alpha = {
     }
     return arr;
   },
-  xdifferenceBy: function(array, [values], [iteratee = _.identity]) {
-    var map = {};
-    var arr = [];
-    var min = Infinity;
-    var arg0 = {};
-    for (var i = 0; i < arguments[0].length; i++) {
-      arg0[[(iteratee = _.identity)](arguments[0][i])] = 1;
-    }
-    for (var i = 0; i < arguments.length; i++) {
-      for (var j = 0; j < arguments[i].length; j++) {
-        if ([(iteratee = _.identity)](arguments[0][i]) in map == false) {
-          map[[(iteratee = _.identity)](arguments[0][i])] = 1;
-        } else {
-          map[[(iteratee = _.identity)](arguments[0][i])] += 1;
-        }
-      }
-    }
-    for (var key in map) {
-      if (key in arg0 && map[key] == 1) {
-        var temp = key;
-        arr.push(Number(temp));
-      }
-    }
-    return arr;
-  },
   drop: function drop(array, n) {
     var arr;
     if (n == null) {
@@ -354,7 +329,7 @@ var cera_alpha = {
   },
   property: function(path) {
     return function(obj) {
-      obj[path];
+      return obj[path];
     };
   },
   iteratee: function(func) {
@@ -388,29 +363,29 @@ var cera_alpha = {
       }
     }
   },
-  differenceBy : function(array, values, iteratee) {
+  differenceBy : function(array,...args) {
     var arr = []
     var result = []
     var len = arguments.length-1
     if (typeof arguments[len] ==='string'||typeof arguments[len]==='function') {
-      iteratee = cera_alpha.iteratee(arguments[len])
-      len = len - 1
+      var iteratee = cera_alpha.iteratee(arguments[len])
+      len--
     } else {
-      iteratee = cera_alpha.identity(iteratee)
+      var iteratee = cera_alpha.identity
     }
     for (var i=1;i<=len;i++) {
-      arr.push(arguments[i].map(element => iteratee(element)))
+      arr.push(arguments[i].map(element => {var temp = element;return iteratee(temp)}))
     }
     for (var i=0;i<array.length;i++) {
       var flag = true
       for (var j=0;j<arr.length;j++) {
-        if (iteratee(array[i]) in arr[j] === false) {
+        if (arr[j].includes(iteratee(array[i])) === false) {
           flag = false
         }
       }
-      if (flag) result.push(array[i])
+      if (!flag) result.push(array[i])
     }
     return result
   },
-
+  
 };
